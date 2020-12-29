@@ -1,7 +1,7 @@
 package com.imooc.myo2o.dao;
 import com.imooc.myo2o.entity.Shop;
 
-/**@author 张自强
+/**@author zzq
  * @date  2020年11月11日 下午9:01:11
  * @version 1.0 
  * @parameter  
