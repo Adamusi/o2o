@@ -32,7 +32,7 @@ public enum ShopStateEnum {
 	 * @return
 	 */
 	public static ShopStateEnum stateOf(int index) {
-		for (ShopStateEnum state : values()) {
+		for (ShopStateEnum state : values()) {//values代表CHECK所有的类型
 			if (state.getState() == index) {
 				return state;
 			}

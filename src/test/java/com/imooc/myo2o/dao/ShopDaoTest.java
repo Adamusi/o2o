@@ -19,7 +19,6 @@ public class ShopDaoTest extends BaseTest {
 	@Autowired
 	private ShopDao shopDao;
   
-	@Test
 	@Ignore
 	public void testInsertShop()  {
 		Shop shop = new Shop();
@@ -50,14 +49,14 @@ public class ShopDaoTest extends BaseTest {
 	@Test
 	public void testModifyShop()  {
 		Shop shop = new Shop();
-		shop.setShopId(1L);
-		shop.setShopName("1222");
+		shop.setShopId(15L);
+		shop.setShopName("22");
 		shop.setShopDesc("zzz");
 		shop.setShopAddr("zzz");
 		shop.setPhone("zzz");
 		shop.setShopImg("zzz");
-		shop.setCreateTime(new Date());
-		shop.setLastEditTime(new Date());
+	    shop.setCreateTime(new Date()); 
+	    shop.setLastEditTime(new Date());
 		shop.setEnableStatus(0);
 		shop.setAdvice("1");
 		int effectedNum = shopDao.updateShop(shop);

@@ -11,7 +11,7 @@ import com.imooc.myo2o.enums.ShopStateEnum;
 public class ShopExecution {
 
 	// 结果状态
-	private int state;
+	private int state; // 枚举类型(ShopStateEnum)
 
 	// 状态标识
 	private String stateInfo;
@@ -28,20 +28,20 @@ public class ShopExecution {
 	public ShopExecution() {
 	}
 
-	// 失败的构造器
+	// 店铺操作失败的时候使用的构造器
 	public ShopExecution(ShopStateEnum stateEnum) { //枚举类型参数
 		this.state = stateEnum.getState();
 		this.stateInfo = stateEnum.getStateInfo();
 	}
 
-	// 成功的构造器
+	// 店铺操作成功的时候使用的构造器
 	public ShopExecution(ShopStateEnum stateEnum, Shop shop) {
 		this.state = stateEnum.getState();
 		this.stateInfo = stateEnum.getStateInfo();
 		this.shop = shop;
 	}
 
-	// 成功的构造器
+	// 店铺操作成功的时候使用的构造器
 	public ShopExecution(ShopStateEnum stateEnum, List<Shop> shopList) {
 		this.state = stateEnum.getState();
 		this.stateInfo = stateEnum.getStateInfo();

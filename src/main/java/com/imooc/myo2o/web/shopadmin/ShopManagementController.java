@@ -26,15 +26,17 @@ import com.imooc.myo2o.service.ShopService;
 import com.imooc.myo2o.util.HttpServletRequestUtil;
 import com.imooc.myo2o.util.ImageUtil;
 import com.imooc.myo2o.util.PathUtil;
-//店铺管理
 
+/**
+ * @Description: 店铺操作控制器
+ */
 @Controller
 @RequestMapping("/shopadmin")
 public class ShopManagementController {
 	@Autowired
 	private ShopService shopService;
 	
-	@RequestMapping(value="/registershop", method = RequestMethod.GET, produces = { "application/json;charset=utf-8" })
+	@RequestMapping(value="/registershop", method = RequestMethod.POST, produces = { "application/json;charset=utf-8" })
 	@ResponseBody
 	private Map<String, Object> registerShop(HttpServletRequest request) {
 		Map<String, Object> modelMap = new HashMap<String, Object>();

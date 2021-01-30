@@ -1,6 +1,11 @@
 package com.imooc.myo2o.util;
-
+/**
+ * 路径的工具类
+ * @author zzq
+ */
 public class PathUtil {
+	
+	//获取文件操作符
 	private static String seperator = System.getProperty("file.separator");
 	//获取项目图片的根路径
 	public static String getImgBasePath() {
@@ -14,6 +19,7 @@ public class PathUtil {
 		basePath = basePath.replace("/", seperator);
 		return basePath;
 	}
+	
 	//(业务需求)获取子项目的图片路径
 	public static String getShopImagePath(long shopId) {
 		String imagePath = "upload/item/shop/" + shopId + "/";

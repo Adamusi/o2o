@@ -43,9 +43,8 @@ public class ShopServiceTest extends BaseTest{
 		shop.setLastEditTime(new Date());
 		shop.setEnableStatus(ShopStateEnum.CHECK.getState());
 		shop.setAdvice("审核中");
-	    String filePath = "G:\\坚持学习\\test\\9.jpg";
-		File file = new File(filePath);  
-		ShopExecution se = shopService.addShop(shop,file);
+		File shopImg = new File("G:\\picture\\test.jpg");  
+		ShopExecution se = shopService.addShop(shop,shopImg);
 		assertEquals(ShopStateEnum.CHECK.getState(), se.getState());
 	}
 }
